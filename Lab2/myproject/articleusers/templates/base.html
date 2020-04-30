@@ -1,0 +1,76 @@
+{% load staticfiles %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/basor.css' %}">
+    <title>{% block title %}
+
+    {% endblock %}</title>
+
+</head>
+<body class="body">
+{% block content %}
+
+{% endblock %}
+<style>
+  .container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background-size:120%;
+  width:1250px;
+  height:550px;
+}
+</style>
+<script type="text/javascript">
+  function signupFunction()
+  {
+    var csrftoken ='{{ csrf_token }}';
+    var xhttp;
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function(){
+      if(this.readyState == 4 && this.status == 200)
+      {
+        var json = JSON.parse(this.responseText);
+        alert(this.responseText);
+      }
+    }
+    xhttp.open("POST","http://127.0.0.1:8000/users/signup/");
+    xhttp.setRequestHeader("X-CSRFToken",csrftoken);
+    xhttp.setRequestHeader("Content-Type", "application/json;charset:utf-8");
+    var data = JSON.stringify({username : document.getElementById("username").value,
+                               password1 : document.getElementById("password1").value,
+                               password2 : document.getElementById("password2").value})
+    
+    xhttp.send(data);
+  }
+
+  function loginFunction() {
+        var csrftoken = '{{ csrf_token }}';
+        var xhttp;
+        xhttp = new XMLHttpRequest();
+
+        var data = JSON.stringify({
+            username: document.getElementById("username").value,
+            password: document.getElementById("password1").value
+        });
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                alert("Welcome, " + document.getElementById("username").value);
+                var json = JSON.parse(this.responseText);
+                console.log(json.username)
+                console.log(json.password)
+            }
+        }
+        xhttp.open("POST", "http://127.0.0.1:8000/users/login/");
+        xhttp.setRequestHeader("X-CSRFToken", csrftoken);
+        xhttp.setRequestHeader("Content-Type", "application/json");
+        xhttp.send(data);
+    }
+</script>
+</body>
+
+</html>

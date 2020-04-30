@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <script src="{% static 'js/navbar-burger.js' %}"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/basor.css' %}">
+
+</head>
+<body>
+<nav class="navbar">
+    <div class="navbar-brand">
+
+        <div class="navbar-burger burger" data-target="nav-data">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+        <div class="navbar-menu" id="nav-data">
+            <a href="/" class="navbar-item">Home</a>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <a href="{% url 'register' %}" class="button is-primary">
+                                <span class="button">SIGN UP</span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+</nav>
+{% block heading %}  {% endblock %}
+
+{%  block content %}
+
+{%  endblock %}
+</body>
+</html>

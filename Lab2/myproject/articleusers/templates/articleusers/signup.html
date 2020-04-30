@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Register
+{% endblock %}
+
+{% block content %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="container">
+    <div class="myclass1">
+        <img src="../static/css/images/935_oooo.plus.png" class="">
+        <div class="content">
+            <h2>Register</h2>
+        </div>
+        <form method="POST" action="">
+            {% csrf_token %}
+            {% for non_field_error in form.non_field_errors %}
+            <p class="help is-danger">{{ non_field_error }}</p>
+            {% endfor %}
+            <div class="field">
+                <input class="form__input1" id="username" placeholder=" " {{ form.username }} {% for field in form%}
+                    {% if field.html_name == 'username' %} <label for="{{ field.id_for_label }}"
+                    class="label">{{ field.html_name }}</label>
+                {% endif %}
+                {% endfor %}
+            </div>
+            <div class="field">
+                <input class="form__input2" id="password1" placeholder=" " {{ form.password1 }} {% for field in form%}
+                    {% if field.html_name == 'password1' %} <label for="{{ field.id_for_label }}"
+                    class="label">{{ field.html_name }}</label>
+                {% endif %}
+                {% endfor %}
+            </div>
+            <div class="field">
+                <input class="form__input3" id="password2" placeholder=" " {{ form.password2 }} {% for field in form%}
+                    {% if field.html_name == 'password2' %} <label for="{{ field.id_for_label }}"
+                    class="label">{{ field.html_name }}</label>
+                {% endif %}
+                {% endfor %}
+            </div>
+            <input type="button" value="SIGN UP" class="button is-primary" onclick="signupFunction()">
+        </form>
+    </div>
+</div>
+</body>
+<style>
+    .container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background-size:120%;
+    width:1250px;
+    height:550px;
+}
+</style>
+{% endblock %}

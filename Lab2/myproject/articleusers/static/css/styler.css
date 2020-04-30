@@ -1,0 +1,248 @@
+body {
+    font-family: 'Sintony', sans-serif;
+    color : #5c6369;
+}
+
+.navbar-brand{
+    font-family: 'Inconsolata',monospace;
+    font-size:30px;
+    color:#000;
+    text-transform: uppercase;
+}
+
+.nav-item{
+    text-transform:uppercase;
+    margin-left:50px;
+}
+
+u1,li{
+    display:block;
+    padding:0;
+    margin:0;
+}
+
+p{
+    line-height:1.9em;
+}
+h1,h2,h3,h4,h5{
+   font-family:'Playfair Display',serif;
+   color:#524f4e;
+}
+
+a {
+  color: #000 !important;
+  text-decoration: none
+}
+
+.menu{
+    margin-top:10px;
+    margin-left:150px;
+}
+
+.menu__item{
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.menu__item a{
+    color: #474342;
+    text-transform:uppercase;
+}
+
+.cta {
+    background: #757874;
+    color:#fff;
+    margin-top:-3px;
+    margin-left:+24px;
+    font-size:20px;
+    border-radius:3px;
+    width : 150px;
+    text-transform:uppercase;
+    text-align:center;
+}
+
+.main-header{
+    padding:24px 0;
+}
+
+.title{
+    margin-top:200px;
+    margin-left:90px;
+}
+
+.title__heading{
+    font-size:56px;
+    font-family:'Playfair Family';
+}
+
+
+grid-posts{
+    margin-top:100px;
+    margin-bottom:50px;
+}
+.grid-posts .card{
+    border:0;
+    margin-bottom:10px;
+    padding:10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    margin-top:5px;
+    content-align:center;
+}
+.grid-posts .card-body{
+    padding-left:0;
+    padding-right:0;
+}
+.grid-posts .card-img-top{
+    max-height:350px;
+}
+.grid-posts{
+    margin-top:100px;
+    margin-bottom:50px;
+}
+.grid-posts .card{
+    border:0;
+    margin-bottom:10px;
+    padding:10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    margin-top:5px;
+    content-align:center;
+}
+.grid-posts .card-body{
+    padding-left:0;
+    padding-right:0;
+}
+.grid-posts .card-img-top{
+    max-height:350px;
+}
+.load_more_button{
+    color: #474342;
+    margin:0 auto;
+    margin-top:25px;
+    margin-bottom:0px;
+}
+
+.article__button{
+    border-radius: 12px;
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    padding:10px;
+    margin-top:20px;
+}
+
+.footer{
+    background: #373844;
+    color:#93989e;
+    font-size:13px;
+    text-transform:uppercase;
+    padding:20px 106px;
+}
+
+.socials{
+
+}
+
+.socials__item a {
+    width:52px;
+    height:52px;
+    border-radius:80%;
+    display:block;
+    background:#00008B	;
+}
+
+.socials__item_fb a {
+    background: #3b5998 url('images/0d3b7af79ad2b163f759eed5937cd764.png')  no-repeat center center;
+}
+
+.socials__item_tw a {
+    background: #3b5998 url('images/unnamedtwitter.png')  no-repeat center center;
+    margin:0 12px;
+}
+
+.socials__item_g a {
+    background: #3b5998 url('images/Logo_google+_2015.png')  no-repeat center center;
+}
+
+.line{
+    margin-left:40px;
+    background:#52535e;
+    height:1px;
+    margin-top:73px;
+}
+
+.credits{
+    margin-top:65px;
+    text-align:center;
+    margin-left:40px;
+}
+
+.user{
+    background-color:#f0f0f0;
+    text-transform:uppercase;
+    padding:50px 106px;
+    display: flex;
+    justify-content: center;
+    margin-bottom:80px;
+}
+
+.search-box{
+    background:#2f3640;
+    height:40px;
+    border-radius:40px;
+    padding:10px;
+    margin-top:100px;
+}
+
+.btn-group{
+    padding:20px;
+}
+
+.search-txt {
+ border: none;
+ background: none;
+ outline: none;
+ float: left;
+ padding: 0;
+ color: white;
+ font-size: 16px;
+ transition: 0.4s;
+ font-weight: bold;
+}
+
+.btn-group button {
+  background-color: #2f3640; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding:20px;
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  margin:5px;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add a background color on hover */
+.Get:hover {
+  background-color: #298A08;
+}
+
+.Delete:hover {
+  background-color: #8A0808;
+}
+
+.Put:hover {
+  background-color: orange;
+}
+
+.desc{
+
+}
