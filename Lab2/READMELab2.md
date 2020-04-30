@@ -17,5 +17,7 @@ python manage.py runserver
 Open the address in browser: 127.0.0.1:8000
 
 
-## About
+# About
+
+
 Newly configured request you can checkout at myproject->articleusers->templates->articleusers->base.html starting with a tag <script>. Try to signup/login and you'll see server response.
