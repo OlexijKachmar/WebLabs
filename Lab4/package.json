@@ -1,0 +1,13 @@
+{
+  "name": "reactcourse",
+  "version": "1.0.0",
+  "description": "\"course apsetting.json file\"",
+  "main": "index.html",
+  "scripts": {
+    "start" : "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite" : "lite-server"
+  },
+  "author": "Loxa Skorost",
+  "license": "ISC"
+}
